@@ -33,7 +33,7 @@ router.post('/webhook', async ctx => {
 
 app.use(router.routes()).use(router.allowedMethods())
 
-app.listen(5555)
+app.listen(process.env.PORT || 5555)
 
 const formatMessage = (message) => {
   let inputCurrency = 'USD'
